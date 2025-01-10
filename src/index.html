@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoplanetas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script type="module" src="main.js"></script>
+</head>
+<body>
+<header>
+    <h1>Exoplanetas</h1>
+</header>
+<!-- Análisis 1 -->
+<section>
+    <h2>Distribución de los planetas por tipo</h2>
+    <div id="pieChart" style="width:100%; max-width:600px; height:400px;"></div>
+</section>
+<section>
+    <h2>Comparación entre la masa y el radio (diferenciados por tipo de planeta)</h2>
+    <div id="scatterPlot" style="width:100%; max-width:600px; height:400px;"></div>
+</section>
+<!-- Análisis 2 -->
+<section>
+    <h2>Relación 3D: Radio Orbital, Periodo Orbital y Excentricidad</h2>
+    <div id="scatter3D" style="width:100%; height:600px;"></div>
+</section>
+<!-- Análisis 3 -->
+<section>
+    <h2>Comparación entre la distancia desde la Tierra y el año de descubrimiento (diferenciados por tipo de planeta)</h2>
+    <div id="scatterPlotDiscovery" style="width:100%; height:600px;"></div>
+</section>
+<section>
+    <h2>Tendencia del número de exoplanetas descubiertos por año</h2>
+    <div id="lineGraph" style="width:100%; height:600px;"></div>
+</section>
+<!-- Análisis 4 -->
+<section>
+    <h2>Distribución de los planetas por método de detección</h2>
+    <div id="barGraph" style="width:100%; height:500px;"></div>
+</section>
+<section>
+    <h2>Diagrama de coordenadas paralelas entre los métodos de detección y tipos de planetas</h2>
+    <div id="parallelCategoriesDiagram" style="width:100%; height:600px;"></div>
+</section>
+</body>
+</html>
