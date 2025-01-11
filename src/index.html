@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exoplanetas</title>
+    <title>Análisis de Exoplanetas</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
@@ -11,39 +11,118 @@
 </head>
 <body>
 <header>
-    <h1>Exoplanetas</h1>
+    <h2 id="author">Adrián Sánchez Freire</h2>
 </header>
 <!-- Análisis 1 -->
-<section>
-    <h2>Distribución de los planetas por tipo</h2>
-    <div id="pieChart" style="width:100%; max-width:600px; height:400px;"></div>
-</section>
-<section>
-    <h2>Comparación entre la masa y el radio (diferenciados por tipo de planeta)</h2>
-    <div id="scatterPlot" style="width:100%; max-width:600px; height:400px;"></div>
-</section>
-<!-- Análisis 2 -->
-<section>
-    <h2>Relación 3D: Radio Orbital, Periodo Orbital y Excentricidad</h2>
-    <div id="scatter3D" style="width:100%; height:600px;"></div>
-</section>
-<!-- Análisis 3 -->
-<section>
-    <h2>Comparación entre la distancia desde la Tierra y el año de descubrimiento (diferenciados por tipo de planeta)</h2>
-    <div id="scatterPlotDiscovery" style="width:100%; height:600px;"></div>
-</section>
-<section>
-    <h2>Tendencia del número de exoplanetas descubiertos por año</h2>
-    <div id="lineGraph" style="width:100%; height:600px;"></div>
-</section>
-<!-- Análisis 4 -->
-<section>
-    <h2>Distribución de los planetas por método de detección</h2>
-    <div id="barGraph" style="width:100%; height:500px;"></div>
-</section>
-<section>
-    <h2>Diagrama de coordenadas paralelas entre los métodos de detección y tipos de planetas</h2>
-    <div id="parallelCategoriesDiagram" style="width:100%; height:600px;"></div>
-</section>
+<main>
+    <div class="pieChartDiv">
+        <div class="intro">
+            <h1 class='intro_title'><span>ANÁLISIS DE EXOPLANETAS</span></h1>
+            <p class='intro_subtitle'>Búsqueda y análisis de exoplanetas similares a la Tierra</p>
+        </div>
+        <div class="text">
+            <p></p>
+            <p></p>
+        </div>
+        <div class="graph">
+            <text class="graph_title">DISTRIBUCIÓN DE LOS PLANETAS POR TIPO</text>
+            <div id="pieChart"></div>
+        </div>
+        <div class="text">
+            <p></p>
+            <p></p>
+        </div>
+    </div>
+    <div class="chartDiv">
+        <div class="subtitle">
+            <h2>Título 2</h2>
+        </div>
+        <div class="text">
+            <p></p>
+        </div>
+        <div class="graph">
+            <text class="graph_title">Comparación entre la masa y el radio (diferenciados por tipo de planeta)</text>
+            <div id="scatterPlot"></div>
+        </div>
+        <div class="text">
+            <p></p>
+        </div>
+    </div>
+    <div class="chartDiv">
+        <div class="subtitle">
+            <h2></h2>
+        </div>
+        <div class="text">
+            <p></p>
+        </div>
+        <div class="graph">
+            <text class="graph_title">Relación 3D: Radio Orbital, Periodo Orbital y Excentricidad</text>
+            <div id="scatter3D"></div>
+        </div>
+        <div class="text">
+            <p></p>
+        </div>
+    </div>
+    <div class="chartDiv">
+        <div class="subtitle">
+            <h2></h2>
+        </div>
+        <div class="text">
+            <p></p>
+        </div>
+        <div class="graph">
+            <text class="graph_title">Comparación entre la distancia desde la Tierra y el año de descubrimiento (diferenciados por tipo de planeta)</text>
+            <div id="scatterPlotDiscovery"></div>
+        </div>
+        <div class="text">
+            <p></p>
+        </div>
+    </div>
+    <div class="chartDiv">
+        <div class="subtitle">
+            <h2></h2>
+        </div>
+        <div class="text">
+            <p></p>
+        </div>
+        <div class="graph">
+            <text class="graph_title">Tendencia del número de exoplanetas descubiertos por año</text>
+            <div id="lineGraph"></div>
+        </div>
+        <div class="text">
+            <p></p>
+        </div>
+    </div>
+    <div class="chartDiv">
+        <div class="subtitle">
+            <h2></h2>
+        </div>
+        <div class="text">
+            <p></p>
+        </div>
+        <div class="graph">
+            <text class="graph_title">Distribución de los planetas por método de detección</text>
+            <div id="barGraph"></div>
+        </div>
+        <div class="text">
+            <p></p>
+        </div>
+    </div>
+    <div class="chartDiv">
+        <div class="subtitle">
+            <h2></h2>
+        </div>
+        <div class="text">
+            <p></p>
+        </div>
+        <div class="graph">
+            <text class="graph_title">Diagrama de coordenadas paralelas entre los métodos de detección y tipos de planetas</text>
+            <div id="parallelCategoriesDiagram"></div>
+        </div>
+        <div class="text">
+            <p></p>
+        </div>
+    </div>
+</main>
 </body>
 </html>

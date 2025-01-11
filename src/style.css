@@ -1,33 +1,114 @@
-body {
-    font-family: 'Arial', sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    box-sizing: border-box;
 }
 
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #4CAF50;
+body {
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+h1, h2, p, text {
     color: white;
 }
 
-section {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Estilos para el encabezado */
+header {
+    text-align: center;
+    font-size: 15px;
+    padding-top: 1rem;
+    background-color: rgb(60, 60, 60);
 }
 
-.bar {
-    transition: fill 0.2s;
+.pieChartDiv {
+    padding-bottom: 1rem;
+    background-color: rgb(60, 60, 60);
 }
 
-.bar:hover {
-    fill: #ff7f0e;
+.chartDiv {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: rgb(60, 60, 60);
+    border-top: 5px rgb(90, 90, 90) solid;
+}
+
+#pieChartDiv {
+    padding-bottom: 1rem;
+}
+
+#pieChartDiv {
+    padding-bottom: 1rem;
+}
+
+#pieChartDiv {
+    padding-bottom: 1rem;
+}
+
+#pieChartDiv {
+    padding-bottom: 1rem;
+}
+
+.intro {
+    padding: 0.5rem 1rem 2rem;
+    text-align: center;
+}
+
+.intro_title{
+    padding-top: 0.5rem;
+    font-size: 56px;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+span {
+    text-shadow: gray 3px 3px;
+}
+
+.intro_subtitle {
+    font-size: 26px;
+    max-width: 50rem;
+    margin: 0 auto;
+    font-weight: 600;
+}
+
+.text {
+    max-width: 40rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.text p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0 0 1.5rem;
+}
+
+.graph {
+    max-width: 40rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.graph_title {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.subtitle {
+    max-width: 40rem;
+    padding: 0 1rem;
+    position: relative;
+    margin: 0 auto;
+}
+
+.subtitle h2 {
+    font-weight: 600;
+    font-size: 2.2em;
+    text-shadow: gray 2px 2px;
+    line-height: 1.2;
+    margin-top: 1.5rem;
+
 }
 
 .modebar{
