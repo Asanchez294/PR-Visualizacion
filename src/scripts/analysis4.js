@@ -21,7 +21,11 @@ export function analysis4(data, colorsPlanetType) {
         y: detectionCounts,
         type: 'bar',
         marker: {
-            color: 'rgba(0, 0, 0, 1)'
+            color: 'rgba(255, 255, 255, 1)',
+            line: {
+                color: 'rgba(0, 0, 0, 1)',
+                width: 3
+            }
         }
     }];
 
@@ -33,10 +37,28 @@ export function analysis4(data, colorsPlanetType) {
             t: 50,
             pad: 4
         },
-        xaxis: {title: 'Método de detección'},
-        yaxis: {title: 'Número de exoplanetas detectados'},
-        width: 800,
-        height: 500
+        xaxis: {
+            automargin: true,
+            title: {
+                text: 'Método de detección',
+                standoff: 20
+            },
+            gridcolor: 'rgba(255, 255, 255, 0.5)'
+        },
+        yaxis: {
+            automargin: true,
+            title: {
+                text: 'Número de exoplanetas detectados',
+                standoff: 20
+            },
+            gridcolor: 'rgba(255, 255, 255, 0.5)'
+        },
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        plot_bgcolor: 'rgba(0, 0, 0, 0)',
+        font: {
+            color: 'rgba(255, 255, 255, 1)'
+        },
+        height: 600
     };
 
     Plotly.newPlot('barGraph', barData, barLayout, {
@@ -55,7 +77,7 @@ export function analysis4(data, colorsPlanetType) {
             label: 'Método de detección',
             values: data.map(planet => planet.detection_method),
             categoryorder: 'array',
-            categoryarray: detectionMethods
+            categoryarray: detectionMethods,
         },
         {
             label: 'Tipo de planeta',
@@ -68,24 +90,26 @@ export function analysis4(data, colorsPlanetType) {
         dimensions: dimensions,
         line: {
             shape: 'hspline',
-            color: planetTypeColors
+            color: planetTypeColors,
         },
         hoverinfo: 'count'
     }];
 
     const parcatsLayout = {
         margin: {
-            l: 50,
-            r: 50,
+            l: 150,
+            r: 150,
             b: 50,
             t: 50,
             pad: 4
         },
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        plot_bgcolor: 'rgba(0, 0, 0, 0)',
         font: {
-            size: 10
+            color: 'rgba(255, 255, 255, 1)',
         },
-        width: 800,
-        height: 600
+        arrangement: 'freeform',
+        height: 800
     };
 
     Plotly.newPlot('parallelCategoriesDiagram', parcatsData, parcatsLayout, {

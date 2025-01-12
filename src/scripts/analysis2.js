@@ -11,13 +11,24 @@ export function analysis2(data, colorsPlanetType) {
             x: filteredData.map(planet => planet.orbital_radius),
             y: filteredData.map(planet => planet.orbital_period),
             z: filteredData.map(planet => planet.eccentricity),
+            text: filteredData.map(planet => planet.name),
             mode: 'markers',
             marker: {
-                size: 8,
+                size: 10,
                 color: colorsPlanetType[planetType],
+                opacity: 0.8,
+                line: {
+                    color: 'rgba(0, 0, 0, 1)',
+                    width: 2
+                }
             },
             name: planetType,
-            type: 'scatter3d'
+            type: 'scatter3d',
+            hovertemplate:
+                '<b>%{text}</b><br>' +
+                'Radio orbital: %{x} AU<br>' +
+                'Periodo orbital: %{y} años<br>' +
+                'Excentricidad: %{z}<br>'
         };
     })
 
@@ -25,19 +36,37 @@ export function analysis2(data, colorsPlanetType) {
         margin: {
             l: 50,
             r: 50,
-            b: 50,
-            t: 50,
+            b: 0,
+            t: 0,
             pad: 4
         },
+        height: 700,
         scene: {
-            xaxis: {title: 'Radio orbital (en AU)'},
-            yaxis: {title: 'Periodo orbital (en años)'},
-            zaxis: {title: 'Excentricidad'}
+            xaxis: {
+                title: 'Radio orbital (en AU)',
+                type: 'log',
+                hoverformat: '.2f',
+            },
+            yaxis: {
+                title: 'Periodo orbital (en años)',
+                type: 'log',
+                hoverformat: '.2f',
+            },
+            zaxis: {
+                title: 'Excentricidad',
+                type: 'log',
+                hoverformat: '.2f',
+            }
         },
-        showlegend: true
+        showlegend: true,
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        plot_bgcolor: 'rgba(0, 0, 0, 0)',
+        font: {
+            color: 'rgba(255, 255, 255, 1)'
+        }
     };
 
-    Plotly.newPlot('scatter3D', planetData, layout, {
+    Plotly.newPlot('scatter3DPlot', planetData, layout, {
         showTips: false
     });
 }

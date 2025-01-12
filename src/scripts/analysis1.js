@@ -14,7 +14,21 @@ export function analysis1(data, colorsPlanetType) {
         labels: planetTypes,
         values: typeFreqs,
         type: 'pie',
-        marker: {colors: planetTypes.map(type => colorsPlanetType[type])},
+        textinfo: "label+percent",
+        pull: [0, 0, 0, 0.4, 0], //Para sacar el pedazo de tarta de Terrestrial
+        insidetextfont: { color: 'rgba(255, 255, 255, 1)' },
+        marker: {
+            colors: planetTypes.map(type => colorsPlanetType[type]),
+            line: {
+                color: 'rgba(0, 0, 0, 1)',
+                width: 2
+            }
+        },
+        hovertemplate:
+            '<b>%{label}</b><br>' +
+            'Count: %{value}<br>' +
+            'Porcentaje: %{percent}<br>' +
+            '<extra></extra>'
     }];
 
     // De momento no voy a definir títulos para los gráficos (tengo los títulos del html)
@@ -25,7 +39,11 @@ export function analysis1(data, colorsPlanetType) {
             b: 50,
             t: 50,
             pad: 4
-        }
+        },
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        font: {
+            color: 'rgba(255, 255, 255, 1)'
+        },
     };
 
     Plotly.newPlot('pieChart', pieData, pieLayout, {
@@ -45,21 +63,51 @@ export function analysis1(data, colorsPlanetType) {
             marker: {
                 size: 10,
                 color: colorsPlanetType[planetType],
+                line: {
+                    color: 'rgba(0, 0, 0, 1)',
+                    width: 2
+                }
             },
+            hovertemplate:
+                '<b>%{text}</b><br>' +
+                'Masa: %{x} M<sub>⊕</sub><br>' +
+                'Radio: %{y} R<sub>⊕</sub><br>'
         };
     });
 
     const scatterLayout = {
+        hovermode: 'closest',
         margin: {
-            l: 50,
+            l: 150,
             r: 50,
             b: 50,
             t: 50,
             pad: 4
         },
-        xaxis: {title: 'Masas terrestres'},
-        yaxis: {title: 'Radios terrestres'},
+        height: 600,
+        xaxis: {
+            title: 'Masas terrestres',
+            type: 'log',
+            hoverformat: '.2f',
+            tickformat: 'd',
+            gridcolor: 'rgba(255, 255, 255, 0.5)'
+        },
+        yaxis: {
+            automargin: true,
+            title: {
+                text: 'Radios terrestres',
+                standoff: 10
+            },
+            type: 'log',
+            hoverformat: '.2f',
+            gridcolor: 'rgba(255, 255, 255, 0.5)'
+        },
         showlegend: true,
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        plot_bgcolor: 'rgba(0, 0, 0, 0)',
+        font: {
+            color: 'rgba(255, 255, 255, 1)'
+        }
     };
 
     Plotly.newPlot('scatterPlot', scatterData, scatterLayout, {

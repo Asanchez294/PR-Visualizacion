@@ -88,11 +88,59 @@ span {
     max-width: 40rem;
     padding: 0 1rem;
     margin: 0 auto;
+    text-align: center;
 }
 
 .graph_title {
+    max-width: 40rem;
     font-weight: 600;
     font-size: 20px;
+}
+.graph_subtitle {
+    max-width: 40rem;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+#scatter.graph {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#scatter3D.graph {
+    max-width: 100rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#scatterDiscovery.graph {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#line.graph {
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#bar.graph {
+    max-width: 60rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#parallelCategories.graph {
+    max-width: 90rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.user-select-none.svg-container {
+    margin: 0 auto !important;
+    text-align: center;
 }
 
 .subtitle {

@@ -16,21 +16,46 @@ export function analysis3(data, colorsPlanetType) {
             marker: {
                 size: 10,
                 color: colorsPlanetType[planetType],
+                line: {
+                    color: 'rgba(0, 0, 0, 1)',
+                    width: 2
+                }
             },
+            hovertemplate:
+                '<b>%{text}</b><br>' +
+                'Distancia: %{x} años luz<br>' +
+                'Año: %{y}<br>'
         };
     });
 
     const scatterDiscoveryLayout = {
         margin: {
-            l: 50,
+            l: 150,
             r: 50,
             b: 50,
             t: 50,
             pad: 4
         },
-        xaxis: {title: 'Distancia desde la Tierra (en años luz)'},
-        yaxis: {title: 'Año de descubrimiento'},
+        hovermode: 'closest',
+        xaxis: {
+            title: 'Distancia desde la Tierra (en años luz)',
+            gridcolor: 'rgba(255, 255, 255, 0.5)'
+        },
+        yaxis: {
+            automargin: true,
+            title: {
+                text: 'Año de descubrimiento',
+                standoff: 20
+            },
+            gridcolor: 'rgba(255, 255, 255, 0.5)'
+        },
         showlegend: true,
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        plot_bgcolor: 'rgba(0, 0, 0, 0)',
+        font: {
+            color: 'rgba(255, 255, 255, 1)'
+        },
+        height: 600
     };
 
     Plotly.newPlot('scatterPlotDiscovery', scatterDiscoveryData, scatterDiscoveryLayout, {
@@ -53,7 +78,17 @@ export function analysis3(data, colorsPlanetType) {
         y: counts,
         mode: 'lines+markers',
         type: 'scatter',
-        line: {color: 'black', width: 2},
+        line: {
+            color: 'rgba(255, 255, 255, 1)',
+            width: 5
+        },
+        marker: {
+            size: 10,
+            line: {
+                color: 'rgba(0, 0, 0, 1)',
+                width: 2
+            }
+        }
     };
 
     const lineLayout = {
@@ -64,9 +99,24 @@ export function analysis3(data, colorsPlanetType) {
             t: 50,
             pad: 4
         },
-        xaxis: {title: 'Año de descubrimiento'},
-        yaxis: {title: 'Número de exoplanetas descubiertos'},
-        showlegend: false
+        xaxis: {
+            title: 'Año de descubrimiento',
+            gridcolor: 'rgba(255, 255, 255, 0.5)'
+        },
+        yaxis: {
+            automargin: true,
+            title: {
+                text: 'Número de exoplanetas descubiertos',
+                standoff: 20
+            },
+            gridcolor: 'rgba(255, 255, 255, 0.5)'
+        },
+        showlegend: false,
+        paper_bgcolor: 'rgba(0, 0, 0, 0)',
+        plot_bgcolor: 'rgba(0, 0, 0, 0)',
+        font: {
+            color: 'rgba(255, 255, 255, 1)'
+        }
     };
 
     Plotly.newPlot('lineGraph', [trace], lineLayout, {
