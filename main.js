@@ -9,7 +9,7 @@ import {analysis4} from "./src/scripts/analysis4.js";
 async function main() {
     try {
         // Cargar los datos de los exoplanetas
-        const data = await loadExoplanetData('../data/exoplanets_clean.csv');
+        const data = await loadExoplanetData('data/exoplanets_clean.csv');
         console.log("Datos cargados correctamente");
 
         // Llamo a cada scripts para que defina los gráficos a mostrar
