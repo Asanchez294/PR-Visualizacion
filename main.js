@@ -1,9 +1,9 @@
-import {loadExoplanetData} from "./scripts/csvLoader.js";
-import {colorsPlanetType} from "./scripts/colors.js"
-import {analysis1} from "./scripts/analysis1.js";
-import {analysis2} from "./scripts/analysis2.js";
-import {analysis3} from "./scripts/analysis3.js";
-import {analysis4} from "./scripts/analysis4.js";
+import {loadExoplanetData} from "./src/scripts/csvLoader.js";
+import {colorsPlanetType} from "./src/scripts/colors.js"
+import {analysis1} from "./src/scripts/analysis1.js";
+import {analysis2} from "./src/scripts/analysis2.js";
+import {analysis3} from "./src/scripts/analysis3.js";
+import {analysis4} from "./src/scripts/analysis4.js";
 
 // Función para cargar los datos y llamar a todos los scripts de análisis
 async function main() {
