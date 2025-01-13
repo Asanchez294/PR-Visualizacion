@@ -11,7 +11,7 @@ a los .js de la carpeta **scripts**.
 * **scripts**: Carpeta en la que tenemos todos los archivos que llamará el .js principal **main.js**. 
 Dentro encontramos los .js que se encargarán de cargar los datos, mapear los colores y cargar cada uno de los gráficos.
 
-En la carpeta **/data** se encuentra el .csv con los datos de los exoplanetas.
+En la carpeta **/data** se encuentra el .csv con los datos de los exoplanetas. Fuente de los datos: https://www.kaggle.com/datasets/adityamishraml/nasaexoplanets/data
 
 Por último, en la carpeta **/notebook** se encuentra el notebook utilizado para realizar el EDA y las 
 transformaciones previas a los datos.
